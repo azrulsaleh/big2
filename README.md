@@ -25,3 +25,12 @@ npm install --save-dev @types/three
 # @tailwindcss/vite = package for vite plugin (for v4.0 onwards)
 npm install tailwindcss @tailwindcss/vite
 ```
+
+## git commit conventions
+- feat: new feature for the end-user
+- fix: bug fix across the application
+- refactor: rewriting code without changing its external behavior
+- chore: maintenance, build configs, or dependency updates
+- docs: changes restricted strictly to documentation
+- test: adding missing tests or refactoring existing ones
+- perf: a performance-focused code optimization
