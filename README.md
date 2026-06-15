@@ -26,7 +26,8 @@ npm install --save-dev @types/three
 npm install tailwindcss @tailwindcss/vite
 ```
 
-## git commit conventions
+## git
+### commit conventions
 - feat: new feature for the end-user
 - fix: bug fix across the application
 - refactor: rewriting code without changing its external behavior
@@ -34,3 +35,9 @@ npm install tailwindcss @tailwindcss/vite
 - docs: changes restricted strictly to documentation
 - test: adding missing tests or refactoring existing ones
 - perf: a performance-focused code optimization
+
+### branch naming conventions
+- feat/ -> feat/oauth-login
+- fix/ -> fix/navbar-overflow
+- hotfix/ -> hotfix/input-segfault
+- docs/ -> docs/readme
