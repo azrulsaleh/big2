@@ -11,7 +11,8 @@ export function R3FBox() {
   const [active, setActive] = useState(false);
 
   // Rotate mesh every frame (this hook runs on the R3F render loop)
-  useFrame((state, delta) => {
+  // _ added before state = for unused variable but needed for function
+  useFrame((_state, delta) => {
     if (meshRef.current) {
       meshRef.current.rotation.x += delta * 0.5;
       meshRef.current.rotation.y += delta * 0.5;

@@ -1,6 +1,7 @@
-# Big2 UI
+# big2 ui
 
-## Initializing project
+## setup
+### initializing project
 ```
 # create vite project with react and standard typescript template (no react compiler)
 # -- = tells npm to stop listening. anything after are options for vite
@@ -24,6 +25,28 @@ npm install --save-dev @types/three
 # install tailwind css
 # @tailwindcss/vite = package for vite plugin (for v4.0 onwards)
 npm install tailwindcss @tailwindcss/vite
+```
+
+### github pages
+terminal
+```
+#install gh-pages package
+npm install gh-pages --save-dev
+```
+
+package.json
+```
+#at top level
+"homepage": "http://azrulsaleh.github.io/big2",
+
+#in "scripts"
+"predeploy": "npm run build",
+"deploy": "gh-pages -d dist"
+```
+
+terminal
+```
+npm run deploy
 ```
 
 ## git
