@@ -49,6 +49,12 @@ terminal
 npm run deploy
 ```
 
+vite.config.ts
+```
+#add below plugins
+base: '/big2/',
+```
+
 ## git
 ### commit conventions
 - feat: new feature for the end-user

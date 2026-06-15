@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "http://azrulsaleh.github.io/big2",
+  "homepage": "https://azrulsaleh.github.io/big2",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
