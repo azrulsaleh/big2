@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "./css/uic/button.css";
 
 @theme {
 	/* naming it --color-* allows us to use utility classes like text-* or border-* */

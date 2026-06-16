@@ -1,0 +1,12 @@
+@layer components {
+	.btn {
+		@apply
+			bg-n6 active:bg-b5
+			border border-n5 active:border-b6
+			rounded-lg hover:rounded-xl
+			w-[calc(100%-20px)] hover:w-[calc(100%)]
+			h-[calc(100%-20px)] hover:h-[calc(100%)]
+			transition-all
+			;
+	}
+}
