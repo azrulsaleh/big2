@@ -14,9 +14,9 @@ Error generating stack: `+e.message+`
 				justify-center
 				top-2/5 left-1/2 -translate-1/2
 				text-n6
-			`,children:(0,f.jsxs)(`div`,{className:`flex flex-row gap-[clamp(1rem,5vw,10rem)] items-center`,children:[(0,f.jsxs)(`div`,{className:`
+			`,children:(0,f.jsxs)(`div`,{className:`flex flex-row gap-[clamp(2rem,8vw,9rem)] items-center`,children:[(0,f.jsxs)(`div`,{className:`
 						flex flex-row
-						gap-[clamp(1rem,5vw,10rem)]
 						font-thin
-						text-[clamp(7rem,15vw,15rem)]
-					`,children:[(0,f.jsx)(`h1`,{children:`B`}),(0,f.jsx)(`h1`,{children:`I`}),(0,f.jsx)(`h1`,{children:`G`})]}),(0,f.jsx)(`h1`,{className:`text-[clamp(15rem,25vw,25rem)] font-extrabold`,children:`2`})]})})]})}(0,u.createRoot)(document.getElementById(`root`)).render((0,f.jsx)(l.StrictMode,{children:(0,f.jsx)(p,{})}));
+						text-[clamp(6rem,12vw,12rem)]
+						gap-[clamp(2rem,8vw,9rem)]
+					`,children:[(0,f.jsx)(`h1`,{children:`B`}),(0,f.jsx)(`h1`,{children:`I`}),(0,f.jsx)(`h1`,{children:`G`})]}),(0,f.jsx)(`h1`,{className:`text-[clamp(12rem,24vw,24rem)] font-extrabold`,children:`2`})]})})]})}(0,u.createRoot)(document.getElementById(`root`)).render((0,f.jsx)(l.StrictMode,{children:(0,f.jsx)(p,{})}));
