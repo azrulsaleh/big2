@@ -18,24 +18,39 @@ export default function App() {
 					/>
 				</svg>
 			</div>
-			<div className="
+			<div className='
 				fixed
 				justify-center
 				top-2/5 left-1/2 -translate-1/2
 				text-n6
-			">
-				<div className='flex flex-row gap-[clamp(1rem,5vw,10rem)] items-center'>
+			'>
+				<div className='
+					flex flex-row
+					gap-[clamp(1rem,15vw,4rem)] md:gap-[4rem]
+					items-center
+				'>
 					<div className='
-						flex flex-row
-						gap-[clamp(1rem,5vw,10rem)]
-						font-thin
-						text-[clamp(7rem,15vw,15rem)]
+						flex flex-row font-thin
+						text-[clamp(4rem,16vw,8rem)] md:text-[8rem]
+						gap-[clamp(1rem,15vw,4rem)] md:gap-[4rem]
 					'>
-						<h1>B</h1>
-						<h1>I</h1>
-						<h1>G</h1>
+						<div>B</div>
+						<div>I</div>
+						<div>G</div>
 					</div>
-					<h1 className='text-[clamp(15rem,25vw,25rem)] font-extrabold'>2</h1>
+					<div className='
+						font-extrabold
+						text-[clamp(8rem,32vw,16rem)] md:text-[16rem]
+					'>
+						2
+					</div>
+				</div>
+				{/* -top-[clamp()] md:-top-10 */}
+				<div className='
+					relative text-[1rem] text-center text-b5 font-light tracking-widest
+					-top-[clamp(10px,5vw,50px)] md:-top-[50px]
+				'>
+					A 42 TRANSCENDENCE PROJECT
 				</div>
 			</div>
 		</div>
