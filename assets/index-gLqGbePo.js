@@ -28,4 +28,33 @@ Error generating stack: `+e.message+`
 					`,children:`2`})]}),(0,f.jsx)(`div`,{className:`
 					relative text-[1rem] text-center text-b5 font-light tracking-widest
 					-top-[clamp(10px,5vw,50px)] md:-top-[50px]
-				`,children:`A 42 TRANSCENDENCE PROJECT`})]})]})}(0,u.createRoot)(document.getElementById(`root`)).render((0,f.jsx)(l.StrictMode,{children:(0,f.jsx)(p,{})}));
+				`,children:`A 42 TRANSCENDENCE PROJECT`})]}),(0,f.jsx)(`div`,{className:`
+				fixed
+				w-full h-[70px]
+				content-center
+				bottom-1/4
+			`,children:(0,f.jsxs)(`div`,{className:`
+					flex justify-center
+					gap-[clamp(1px,5vw,20px)] sm:gap-[20px] 
+				`,children:[(0,f.jsxs)(`div`,{className:`flex flex-col`,children:[(0,f.jsx)(`div`,{className:`
+							w-[clamp(150px,50vw,270px)] md:w-[270px]
+							h-[70px]
+							text-center content-center
+						`,children:(0,f.jsx)(`button`,{className:`btn`,children:`SIGN IN`})}),(0,f.jsx)(`div`,{className:`
+							w-[clamp(150px,50vw,270px)] md:w-[270px]
+							h-[70px]
+							text-center content-center
+						`,children:(0,f.jsx)(`button`,{className:`
+								text-n6 hover:text-b5 active:text-n0
+								bg-none active:bg-b5
+								hover:border border-n5 active:border-b6
+								rounded-lg hover:rounded-xl
+								w-[calc(100%-20px)] hover:w-[calc(100%)]
+								h-[calc(100%-20px)] hover:h-[calc(100%)]
+								transition-all
+								text-nowrap
+							`,children:(0,f.jsx)(`u`,{children:`CREATE ACCOUNT`})})})]}),(0,f.jsx)(`div`,{className:`
+						w-[clamp(150px,50vw,270px)] md:w-[270px]
+						h-[70px]
+						text-center content-center
+					`,children:(0,f.jsx)(`button`,{className:`btn`,children:`PLAY AS GUEST`})})]})})]})}(0,u.createRoot)(document.getElementById(`root`)).render((0,f.jsx)(l.StrictMode,{children:(0,f.jsx)(p,{})}));
