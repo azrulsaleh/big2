@@ -19,6 +19,39 @@ export default function App() {
 				</svg>
 			</div>
 			<div className="
+				fixed top-[20px] right-[20px]
+				w-[70px] h-[70px]
+				content-center
+				">
+				<div className="
+					flex
+					bg-n1 active:bg-b4
+					border border-n2 active:bg-b5
+					w-[calc(100%-20px)] hover:w-[calc(100%)]
+					h-[calc(100%-20px)] hover:h-[calc(100%)]
+					rounded-[25px] hover:rounded-[35px]
+					m-auto
+					transition-all
+				">
+					<button className="
+						flex justify-center m-auto
+					">
+						<svg
+							height="25" width="25"
+							viewBox="0 0 25 25"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+							className="icon"
+						>
+							<path
+								d="M12.5 0C5.59647 0 0 5.59641 0 12.5C0 19.4035 5.59647 25 12.5 25C19.4036 25 25 19.4036 25 12.5C25 5.59641 19.4036 0 12.5 0ZM12.5 22.5C6.98602 22.5 2.50002 18.014 2.50002 12.5C2.50002 6.98596 6.98596 2.50002 12.5 2.50002C18.0141 2.50002 22.5 6.98596 22.5 12.5C22.5 18.014 18.0141 22.5 12.5 22.5ZM14.0653 7.5C14.0653 8.40633 13.4054 9.06252 12.5127 9.06252C11.5839 9.06252 10.9402 8.40627 10.9402 7.48266C10.9402 6.59496 11.6013 5.93754 12.5127 5.93754C13.4054 5.93754 14.0653 6.59496 14.0653 7.5ZM11.2528 11.25H13.7527V18.75H11.2528V11.25Z"
+								fillRule="evenodd"
+							/>
+						</svg>
+					</button>
+				</div>
+			</div>
+			<div className="
 				fixed
 				justify-center
 				top-2/5 left-1/2 -translate-1/2
@@ -78,9 +111,10 @@ export default function App() {
 							text-center content-center
 						">
 							<button className="
-								text-n6 hover:text-b5 active:text-n0
+								text-n6 active:text-n0
 								bg-none active:bg-b5
-								hover:border border-n5 active:border-b6
+								hover:border
+								border-n5 active:border-b6
 								rounded-lg hover:rounded-xl
 								w-[calc(100%-20px)] hover:w-[calc(100%)]
 								h-[calc(100%-20px)] hover:h-[calc(100%)]

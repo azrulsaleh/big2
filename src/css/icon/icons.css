@@ -1,0 +1,8 @@
+@layer components {
+	.icon {
+		@apply
+			fill-b5 active:fill-a0
+			transition-all
+			;
+	}
+}
