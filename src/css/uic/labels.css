@@ -1,0 +1,5 @@
+@layer base {
+	label {
+		@apply text-n6 text-lg w-full h-full flex items-center justify-end;
+	}
+}

@@ -2,6 +2,8 @@
 @import "./css/base/typography.css";
 @import "./css/icon/icons.css";
 @import "./css/uic/buttons.css";
+@import "./css/uic/input.css";
+@import "./css/uic/labels.css";
 
 @theme {
 	/* naming it --color-* allows us to use utility classes like text-* or border-* */
@@ -63,10 +65,8 @@ html,
 body,
 #root {
 	@apply
-		m-0 p-0
-		w-full
-		min-h-screen
 		font-sans
+		/* leading-0 */
 		;
 }
 

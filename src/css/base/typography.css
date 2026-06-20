@@ -1,12 +1,12 @@
 @layer base {
 	h1 {
-		@apply text-[16rem] font-extrabold text-n6;
+		@apply text-[clamp(8rem,40vw,16rem)] font-extrabold text-n6;
 	}
 	h2 {
-		@apply text-[8rem] font-thin text-n6 tracking-[4rem];
+		@apply text-[clamp(4rem,20vw,8rem)] font-thin text-n6;
 	}
 	h3 {
-		@apply text-xl font-extralight text-b5 tracking-wider;
+		@apply text-[clamp(0.625rem,5vw,1.25rem)] font-extralight text-b5 tracking-wider leading-5;
 	}
 	h4 {
 		@apply text-lg font-normal text-n0;

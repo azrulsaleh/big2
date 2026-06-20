@@ -1,28 +1,42 @@
 @layer base {
 	button {
-		@apply border transition-all;
+		@apply hover:scale-105 transition-all duration-200 ease-in-out cursor-pointer;
+	}
+	button:hover:not(:disabled) {
+		@apply scale-105;
+	}
+	button:disabled {
+		@apply opacity-50 cursor-default;
 	}
 }
 
 @layer components {
 	.btn-icon {
-		@apply
-			bg-n1 active:bg-b5 border-n2 w-12.5 h-12.5 rounded-3xl
-			flex place-content-center place-items-center
-			transition-all ease-in duration-200
-			;
+		@apply flex place-content-center place-items-center;
 	}
-	.btn-icon:hover {
-		@apply scale-105;
+	.btn-icon .svg-bg {
+		@apply fill-n1 stroke-n2;
+	}
+	.btn-icon:active .svg-bg {
+		@apply fill-b4 stroke-b5;
+	}
+	.btn-icon .svg-icon {
+		@apply fill-b5;
+	}
+	.btn-icon:active .svg-icon {
+		@apply fill-n0;
 	}
 	.btn-icon::after {
 		content: attr(data-tip);
 		@apply
 			absolute z-10 top-15 origin-top
-			border border-n2 rounded-lg bg-n1 px-4 py-2 w-max text-white text-center
+			border border-n2 rounded-3xl
+			bg-n1
+			px-5 py-5
+			w-max text-n6 text-center
 			/* prevent tooltip from flickering if mouse overlaps */
 			pointer-events-none
-			scale-0 opacity-0 transition-all ease-out duration-150
+			scale-0 opacity-0 transition-all ease-out duration-50
 			;
 	}
 	.btn-icon:hover::after {
@@ -32,11 +46,25 @@
 	.btn-text {
 		@apply
 			bg-n6 active:bg-b5
-			border-n5 active:border-b6 rounded-lg
-			w-full h-full hover:scale-105
+			border-n5 active:border-b6 rounded-3xl
+			text-n0
+			min-w-30 w-62.5 min-h-5 h-12.5
 			;
 	}
+
 	.btn-clear {
-		@apply border-none text-white active:text-b5 w-full h-full hover:scale-105;
+		@apply
+			bg-none
+			border-none
+			text-a6 active:text-b5
+			min-w-30 w-62.5 min-h-5 h-12.5
+			;
+	}
+
+	.btn-lightbox {
+		@apply
+			-z-1 absolute w-full h-full
+			backdrop-blur-sm bg-n0/50 hover:bg-n0/25
+			;
 	}
 }

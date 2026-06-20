@@ -1,0 +1,7 @@
+@layer base {
+	input {
+		@apply 
+			bg-n6 w-full h-7.5 rounded-xl p-5
+			;
+	}
+}
