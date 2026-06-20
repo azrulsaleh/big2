@@ -1,41 +1,35 @@
+import { useState } from 'react';
+
 export default function App() {
+	const [showInfo, setShowInfo] = useState(false);
+	const [showCreateAccount, setShowCreateAccount] = useState(false);
+	const [showSignIn, setShowSignIn] = useState(false);
+
 	return (
-		<div>
-			<div className="
-				absolute
-				-z-10
-			">
+		<>
+			{/* bg */}
+			<div className="absolute -z-1">
 				<svg
 					width="100vw"
 					height="100vh"
 					viewBox="0 0 100 100"
+					className='overflow-visible'
 				>
 					<polygon
 						points="100,-100 200,-100 0,200 -100,200"
 						fill="var(--color-a1)"
 						stroke="var(--color-a2)"
-						stroke-width="0.1"
+						strokeWidth="0.1"
 					/>
 				</svg>
 			</div>
-			<div className="
-				fixed top-[20px] right-[20px]
-				w-[70px] h-[70px]
-				content-center
-				">
-				<div className="
-					flex
-					bg-n1 active:bg-b4
-					border border-n2 active:bg-b5
-					w-[calc(100%-20px)] hover:w-[calc(100%)]
-					h-[calc(100%-20px)] hover:h-[calc(100%)]
-					rounded-[25px] hover:rounded-[35px]
-					m-auto
-					transition-all
-				">
-					<button className="
-						flex justify-center m-auto
-					">
+			
+			{/* main */}
+			<div className="z-0 w-full h-full grid grid-rows-[50px_1fr_50px_50px_100px] my-5">
+				<div className="row-start-1 flex justify-end mr-5">
+					<button className="btn-icon" data-tip="Info"
+						onClick={() => {setShowInfo(true)}}
+					>
 						<svg
 							height="25" width="25"
 							viewBox="0 0 25 25"
@@ -50,92 +44,186 @@ export default function App() {
 						</svg>
 					</button>
 				</div>
-			</div>
-			<div className="
-				fixed
-				justify-center
-				top-2/5 left-1/2 -translate-1/2
-				text-n6
-			">
 				<div className="
-					flex flex-row
-					gap-[clamp(1rem,15vw,4rem)] md:gap-[4rem]
-					items-center
+					row-start-2 my-25
+					flex flex-col
+					place-content-center place-items-center
 				">
 					<div className="
-						flex flex-row font-thin
-						text-[clamp(4rem,16vw,8rem)] md:text-[8rem]
-						gap-[clamp(1rem,15vw,4rem)] md:gap-[4rem]
+						flex justify-center items-center
+						h-62.5 gap-5
 					">
-						<div>B</div>
-						<div>I</div>
-						<div>G</div>
+						<h2 className="mt-3.75"><span>B</span><span>I</span><span>G</span></h2>
+						<h1>2</h1>
 					</div>
-					<div className="
-						font-extrabold
-						text-[clamp(8rem,32vw,16rem)] md:text-[16rem]
-					">
-						2
-					</div>
+					<h3 className="text-center">
+						A 42 TRANSCENDENCE PROJECT
+					</h3>
 				</div>
-				<div className="
-					relative text-[1rem] text-center text-b5 font-light tracking-widest
-					-top-[clamp(10px,5vw,50px)] md:-top-[50px]
-				">
-					A 42 TRANSCENDENCE PROJECT
+				<div className="row-start-3 flex place-content-center gap-5">
+					<button className="btn-text w-62.5 h-full"
+						onClick={() => {setShowSignIn(true)}}
+					>
+						SIGN IN
+					</button>
+					<button className="btn-text w-62.5 h-full">
+						PLAY AS GUEST
+					</button>
+				</div>
+				<div className="row-start-4 flex place-content-center gap-5">
+					<button className="btn-clear w-62.5 h-full"
+						onClick={() => {setShowCreateAccount(true)}}
+					>
+						<u>CREATE ACCOUNT</u>
+					</button>
+					<div className="w-62.5 h-full" />
 				</div>
 			</div>
-			<div className="
-				fixed
-				w-full h-[70px]
-				content-center
-				bottom-1/4
-			">
+
+			{showInfo &&
 				<div className="
-					flex justify-center
-					gap-[clamp(1px,5vw,20px)] sm:gap-[20px] 
+					w-full h-full
+					absolute
+					z-1 top-0 left-0
+					flex place-content-center place-items-center
 				">
-					<div className="flex flex-col">
+					<button className="
+						-z-1 absolute
+						backdrop-blur-sm
+						bg-n0/50 hover:bg-n0/25
+						w-full h-full
+						transition-all
+						"
+						onClick={() => setShowInfo(false)}
+					/>
+					<div className="
+						z-0
+						w-[calc(100vw-95px)] h-[calc(100vh-95px)]
+						border border-n2 rounded-2xl
+						overflow-scroll
+					">
 						<div className="
-							w-[clamp(150px,50vw,270px)] md:w-[270px]
-							h-[70px]
-							text-center content-center
+							w-full h-[2000px]
+							bg-linear-to-b from-a4 to-b4
+							p-10
 						">
-							<button className="btn">
+							<h4>Info content here...</h4>
+						</div>
+					</div>
+					<button className="z-1 btn-icon absolute right-0 top-0 -translate-x-[calc(50%-3px)] translate-y-[calc(50%-4px)]"
+						data-tip="Close"
+						onClick={() => {setShowInfo(false)}}
+					>
+						<svg height="19" width="19" fill="none" viewBox="0 0 19 19" xmlns="http://www.w3.org/2000/svg">
+							<path d="M15.9099 18.6098L2.52881e-07 2.69986L2.69986 1.01152e-06L18.6098 15.9099L15.9099 18.6098ZM2.69986 18.6098L0 15.9099L15.9099 0L18.6098 2.69986L2.69986 18.6098Z" fill="#EBBB52"/>
+						</svg>
+					</button>
+				</div>
+			}
+
+			{showSignIn && 
+				<div className="
+					w-full min-w-full h-full
+					absolute
+					z-1 top-0 left-0
+					flex place-content-center place-items-center
+				">
+					<button className="
+						-z-1 absolute
+						backdrop-blur-sm
+						bg-n0/50 hover:bg-n0/25
+						w-full h-full
+						transition-all
+						"
+						onClick={() => setShowSignIn(false)}
+					/>
+					<div className="
+						z-0
+						w-full max-w-125
+						border border-n2 rounded-2xl
+						bg-n1 px-6 py-8
+						flex flex-col gap-5
+						absolute
+					">
+						<div className="w-full flex gap-5 place-content-center place-items-center">
+							<label htmlFor="email" className="w-1/4 text-white text-lg text-right">Email</label>
+							<input id="email" className='bg-n6 w-3/4 h-7.5 rounded-xl p-5' />
+						</div>
+						<div className="w-full flex gap-5 place-content-center place-items-center">
+							<label htmlFor="password" className="w-1/4 text-white text-lg text-right">Password</label>
+							<input id="password" className='bg-n6 w-3/4 h-7.5 rounded-xl p-5' />
+						</div>
+						<div className='flex place-content-center'>
+							<button className="btn-text w-full min-w-50 max-w-62.5 h-12.5">
 								SIGN IN
 							</button>
 						</div>
-						<div className="
-							w-[clamp(150px,50vw,270px)] md:w-[270px]
-							h-[70px]
-							text-center content-center
-						">
-							<button className="
-								text-n6 active:text-n0
-								bg-none active:bg-b5
-								hover:border
-								border-n5 active:border-b6
-								rounded-lg hover:rounded-xl
-								w-[calc(100%-20px)] hover:w-[calc(100%)]
-								h-[calc(100%-20px)] hover:h-[calc(100%)]
-								transition-all
-								text-nowrap
-							">
-								<u>CREATE ACCOUNT</u>
-							</button>
-						</div>
-					</div>
-					<div className="
-						w-[clamp(150px,50vw,270px)] md:w-[270px]
-						h-[70px]
-						text-center content-center
-					">
-						<button className="btn">
-							PLAY AS GUEST
+						<button className="z-1 btn-icon absolute
+							translate-x-[50%] translate-y-[-50%]
+							right-0 top-0
+							"
+							data-tip="Close"
+							onClick={() => {setShowSignIn(false)}}
+						>
+							<svg height="19" width="19" fill="none" viewBox="0 0 19 19" xmlns="http://www.w3.org/2000/svg">
+								<path d="M15.9099 18.6098L2.52881e-07 2.69986L2.69986 1.01152e-06L18.6098 15.9099L15.9099 18.6098ZM2.69986 18.6098L0 15.9099L15.9099 0L18.6098 2.69986L2.69986 18.6098Z" fill="#EBBB52"/>
+							</svg>
 						</button>
 					</div>
 				</div>
-			</div>
-		</div>
+			}
+
+			{showCreateAccount && 
+				<div className="
+					w-full min-w-full h-full
+					absolute
+					z-1 top-0 left-0
+					flex place-content-center place-items-center
+				">
+					<button className="
+						-z-1 absolute
+						backdrop-blur-sm
+						bg-n0/50 hover:bg-n0/25
+						w-full h-full
+						transition-all
+						"
+						onClick={() => setShowCreateAccount(false)}
+					/>
+					<div className="
+						z-0
+						w-full max-w-125
+						border border-n2 rounded-2xl
+						bg-n1 px-6 py-8
+						flex flex-col gap-5
+						absolute
+					">
+						<div className="w-full flex gap-5 place-content-center place-items-center">
+							<label htmlFor="email" className="w-1/4 text-white text-lg text-right">Email</label>
+							<input id="email" className='bg-n6 w-3/4 h-7.5 rounded-xl p-5' />
+						</div>
+						<div className="w-full flex gap-5 place-content-center place-items-center">
+							<label htmlFor="password" className="w-1/4 text-white text-lg text-right">Password</label>
+							<input id="password" className='bg-n6 w-3/4 h-7.5 rounded-xl p-5' />
+						</div>
+						<div className='flex place-content-center'>
+							<button className="btn-text w-full min-w-50 max-w-62.5 h-12.5">
+								CREATE ACCOUNT
+							</button>
+						</div>
+						<button className="z-1 btn-icon absolute
+							translate-x-[50%] translate-y-[-50%]
+							right-0 top-0
+							"
+							data-tip="Close"
+							onClick={() => {setShowCreateAccount(false)}}
+						>
+							<svg height="19" width="19" fill="none" viewBox="0 0 19 19" xmlns="http://www.w3.org/2000/svg">
+								<path d="M15.9099 18.6098L2.52881e-07 2.69986L2.69986 1.01152e-06L18.6098 15.9099L15.9099 18.6098ZM2.69986 18.6098L0 15.9099L15.9099 0L18.6098 2.69986L2.69986 18.6098Z" fill="#EBBB52"/>
+							</svg>
+						</button>
+					</div>
+				</div>
+			}
+		</>
 	);
 }

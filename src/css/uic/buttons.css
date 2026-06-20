@@ -1,12 +1,42 @@
+@layer base {
+	button {
+		@apply border transition-all;
+	}
+}
+
 @layer components {
-	.btn {
+	.btn-icon {
+		@apply
+			bg-n1 active:bg-b5 border-n2 w-12.5 h-12.5 rounded-3xl
+			flex place-content-center place-items-center
+			transition-all ease-in duration-200
+			;
+	}
+	.btn-icon:hover {
+		@apply scale-105;
+	}
+	.btn-icon::after {
+		content: attr(data-tip);
+		@apply
+			absolute z-10 top-15 origin-top
+			border border-n2 rounded-lg bg-n1 px-4 py-2 w-max text-white text-center
+			/* prevent tooltip from flickering if mouse overlaps */
+			pointer-events-none
+			scale-0 opacity-0 transition-all ease-out duration-150
+			;
+	}
+	.btn-icon:hover::after {
+		@apply scale-100 opacity-100;
+	}
+
+	.btn-text {
 		@apply
 			bg-n6 active:bg-b5
-			border border-n5 active:border-b6
-			rounded-lg hover:rounded-xl
-			w-[calc(100%-20px)] hover:w-[calc(100%)]
-			h-[calc(100%-20px)] hover:h-[calc(100%)]
-			transition-all
+			border-n5 active:border-b6 rounded-lg
+			w-full h-full hover:scale-105
 			;
+	}
+	.btn-clear {
+		@apply border-none text-white active:text-b5 w-full h-full hover:scale-105;
 	}
 }
