@@ -1,6 +1,9 @@
 @layer base {
 	button {
-		@apply hover:scale-105 transition-all duration-200 ease-in-out cursor-pointer;
+		@apply
+			cursor-pointer pointer-events-auto
+			hover:scale-105 transition-all duration-200 ease-in-out
+			;
 	}
 	button:hover:not(:disabled) {
 		@apply scale-105;
@@ -66,5 +69,9 @@
 			-z-1 absolute w-full h-full
 			backdrop-blur-sm bg-n0/50 hover:bg-n0/25
 			;
+	}
+
+	.btn-dev {
+		@apply text-r3
 	}
 }

@@ -1,7 +1,11 @@
 @layer base {
 	input {
-		@apply 
-			bg-n6 w-full h-7.5 rounded-xl p-5
-			;
+		@apply bg-n6 w-full h-7.5 rounded-xl p-5;
 	}
+	input::placeholder {
+		@apply text-n4 italic;
+	}
+	/* input:focus {
+		@apply  outline-none ring-3 ring-b5;
+	} */
 }

@@ -64,11 +64,12 @@
 html,
 body,
 #root {
-	@apply
-		font-sans
-		/* leading-0 */
-		;
+	@apply font-sans h-screen w-screen m-0 p-0;
 }
+
+/* *:focus {
+	@apply outline-none ring-2 ring-b5;
+} */
 
 html {
 	@apply bg-big2;

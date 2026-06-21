@@ -26,6 +26,12 @@ npm install --save-dev @types/three
 # install tailwind css
 # @tailwindcss/vite = package for vite plugin (for v4.0 onwards)
 npm install tailwindcss @tailwindcss/vite
+
+# install zustand
+npm install zustand
+
+# install drei
+npm install @react-three/drei
 ```
 
 vite.config.ts
@@ -51,15 +57,15 @@ package.json
 "deploy": "gh-pages -d dist"
 ```
 
-terminal
-```
-npm run deploy
-```
-
 vite.config.ts
 ```
 #add below plugins
 base: '/big2/',
+```
+
+terminal
+```
+npm run deploy
 ```
 
 ## git

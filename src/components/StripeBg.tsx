@@ -1,6 +1,6 @@
 export const StripeBg = () => {
 	return (
-		<div className="absolute -z-1">
+		<div className="absolute -z-10">
 			<svg
 				width="100vw"
 				height="100vh"

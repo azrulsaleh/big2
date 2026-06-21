@@ -32,11 +32,11 @@ export const CreateAccountPopup = ({ dismiss }: CreateAccountProps) => {
 					<div className='flex flex-col place-content-center place-items-center gap-5'>
 						<div className="grid grid-cols-[75px_1fr] gap-5">
 							<label htmlFor="email">Email</label>
-							<input id="email" />
+							<input id="email" placeholder="cadet@42.edu.my"/>
 						</div>
 						<div className="grid grid-cols-[75px_1fr] gap-5">
 							<label htmlFor="password">Password</label>
-							<input id="password" />
+							<input id="password"  placeholder="At least 8 characters"/>
 						</div>
 						<button className="btn-text">
 							CREATE ACCOUNT
