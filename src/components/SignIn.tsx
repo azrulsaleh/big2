@@ -1,16 +1,25 @@
-import { BtnClose } from '../buttons/BtnClose';
+import { BtnClose } from './CloseButton';
 
-interface PopSignInProps {
-    onClick?: () => void;
+interface SignInProps {
+	call?: () => void;
+    dismiss?: () => void;
 }
 
-export const PopSignIn = ({ onClick }: PopSignInProps) => {
+export const SignInButton = ({ call }: SignInProps) => {
+	return (
+		<button className="btn-text" onClick={call}>
+			SIGN IN
+		</button>
+	);
+}
+
+export const SignInPopup = ({ dismiss }: SignInProps) => {
     return (
 		<div className="
 			z-1 absolute top-0 left-0 w-full h-full
 			flex place-content-center place-items-center
         ">
-            <button className='btn-lightbox' onClick={onClick}/>
+            <button className='btn-lightbox' onClick={dismiss}/>
             <div className='
 				min-w-100 w-125 min-h-25
 				flex px-10
@@ -34,7 +43,7 @@ export const PopSignIn = ({ onClick }: PopSignInProps) => {
 						</button>
 					</div>
 					<div className='z-1 absolute right-0 top-0 translate-x-[50%] translate-y-[-50%]'>
-						<BtnClose onClick={onClick}/>
+						<BtnClose dismiss={dismiss}/>
 					</div>
 				</div>
             </div>

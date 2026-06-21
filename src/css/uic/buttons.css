@@ -32,7 +32,7 @@
 			absolute z-10 top-15 origin-top
 			border border-n2 rounded-3xl
 			bg-n1
-			px-5 py-5
+			px-5 py-2.5
 			w-max text-n6 text-center
 			/* prevent tooltip from flickering if mouse overlaps */
 			pointer-events-none
