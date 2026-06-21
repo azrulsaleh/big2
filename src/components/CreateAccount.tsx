@@ -21,24 +21,24 @@ export const CreateAccountPopup = ({ dismiss }: CreateAccountProps) => {
 		">
 			<button className='btn-lightbox' onClick={dismiss}/>
 			<div className='
-				min-w-100 w-125 min-h-25
+				min-w-100 w-135 min-h-25
 				flex px-10
 			'>
 				<div className='
 					bg-n1 border border-n2 rounded-2xl
-					w-full px-6 py-6
+					w-full px-10 py-10
 					relative
 				'>
-					<div className='flex flex-col place-content-center place-items-center gap-5'>
-						<div className="grid grid-cols-[75px_1fr] gap-5">
+					<div className='flex flex-col place-content-center place-items-center gap-2'>
+						<div className="grid grid-cols-[75px_1fr] gap-5 w-full">
 							<label htmlFor="email">Email</label>
-							<input id="email" placeholder="cadet@42.edu.my"/>
+							<input id="email" placeholder="azsaleh@student.42kl.edu.my"/>
 						</div>
-						<div className="grid grid-cols-[75px_1fr] gap-5">
+						<div className="grid grid-cols-[75px_1fr] gap-5 w-full">
 							<label htmlFor="password">Password</label>
 							<input id="password"  placeholder="At least 8 characters"/>
 						</div>
-						<button className="btn-text">
+						<button className="btn-text mt-7.5">
 							CREATE ACCOUNT
 						</button>
 					</div>

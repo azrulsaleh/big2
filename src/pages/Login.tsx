@@ -27,7 +27,10 @@ export const Login = () => {
 			<div className='-z-1 absolute inset-0 w-screen h-screen pointer-events-auto'>
 				<Canvas
 					camera={{ position: [0, 0, 3] }}
-					eventSource={typeof window !== 'undefined' ? document.getElementById('root') : undefined}
+					eventSource={
+						typeof window !== 'undefined'
+						? document.getElementById('root') || undefined
+						: undefined}
 				>
 					<ambientLight intensity={1.0} />
 					<directionalLight position={[10, 10, 5]} intensity={1} />
