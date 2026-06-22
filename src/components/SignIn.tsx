@@ -32,11 +32,11 @@ export const SignInPopup = ({ dismiss }: SignInProps) => {
 					<div className='flex flex-col place-content-center place-items-center gap-2'>
 						<div className="grid grid-cols-[75px_1fr] gap-5 w-full">
 							<label htmlFor="email">Email</label>
-							<input id="email" placeholder="azsaleh@student.42kl.edu.my"/>
+							<input id="email" type="email" placeholder="azsaleh@student.42kl.edu.my"/>
 						</div>
 						<div className="grid grid-cols-[75px_1fr] gap-5 w-full">
 							<label htmlFor="password">Password</label>
-							<input id="password" placeholder="At least 8 characters"/>
+							<input id="password" type="password" placeholder="Enter your password"/>
 						</div>
 						<button className="btn-text mt-7.5">
 							SIGN IN

@@ -24,8 +24,13 @@ export const InfoPopup = ({ dismiss }: InfoProps) => {
 		">
 			<button className='btn-lightbox' onClick={dismiss}/>
 			<div className='
-				z-0 w-[calc(100vw-95px)] h-[calc(100vh-95px)] overflow-scroll
-				border border-n2 rounded-2xl
+				z-0
+				w-[calc(100vw-95px)]
+				h-[calc(100vh-95px)]
+				border border-n2
+				rounded-2xl
+				m-5
+				overflow-scroll
 			'>
 				<div className='
 					w-full h-[2000px] p-10
@@ -35,9 +40,9 @@ export const InfoPopup = ({ dismiss }: InfoProps) => {
 					<p>Start of info content</p>
 					<p>End of info content</p>
 				</div>
-			</div>
-			<div className='z-1 absolute right-0 top-0 -translate-x-[calc(50%)] translate-y-[calc(50%)]'>
-				<BtnClose dismiss={dismiss}/>
+				<div className='z-1 absolute right-0 top-0 -translate-x-[calc(50%)] translate-y-[calc(50%)]'>
+					<BtnClose dismiss={dismiss}/>
+				</div>
 			</div>
 		</div>
 	);
